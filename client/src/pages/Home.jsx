@@ -1,9 +1,10 @@
 import React from 'react'
+import TaskBoard from '../components/TaskBoard'
 
 const Home = () => {
   return (
     <div>
-        <h1 className='text-3xl text-red-100' >Home</h1>
+        <TaskBoard />
     </div>
   )
 }

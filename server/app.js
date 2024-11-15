@@ -4,7 +4,8 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import session, { MemoryStore } from "express-session";
 import { errorHandler, notFound } from "./middlewares/errorMiddleware.js";
-// import userRoutes from "./adapters/routes/userRoutes.js";
+ import userRoutes from "./routes/userRoutes.js"
+ import taskRoutes from "./routes/taskRoutes.js"
 // import postRoutes from "./adapters/routes/postRoutes.js";
 // import adminRoutes from "./adapters/routes/adminRoutes.js";
 // import portfolioRoutes from "./adapters/routes/portfolioRoutes.js";
@@ -43,7 +44,8 @@ app.use(session({
 }));
 
 // Routes
-// app.use('/api/users', userRoutes(dependencies));
+app.use('/api/users', userRoutes); 
+app.use('/api/tasks',taskRoutes)
 // app.use('/api/post', postRoutes(dependencies));
 // app.use('/api/admin', adminRoutes(dependencies));
 // app.use('/api/portfolio', portfolioRoutes(dependencies));
